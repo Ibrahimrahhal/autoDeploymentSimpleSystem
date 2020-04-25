@@ -1,6 +1,10 @@
 import express, { Application } from "express";
-import { allHanders } from './routeHandlers';
+import { allHanders, getSiteHandler } from './routeHandlers';
+
 const app:Application = express();
+app.use(express.static('../public'));
+
+app.get('/', getSiteHandler)
 
 app.all('/', allHanders)
 
