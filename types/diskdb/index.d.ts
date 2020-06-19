@@ -14,6 +14,7 @@ declare module 'diskdb' {
         remove(query:string, multi:boolean):boolean;
         count():number;
     }
-    export default DiskDB;
+    
+    export = DiskDB;
 }
 
